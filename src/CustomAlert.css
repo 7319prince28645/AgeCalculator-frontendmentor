@@ -1,0 +1,120 @@
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  background-color: #000;
+  border: 0px;
+  outline: 0px;
+  color: #fff;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.liquid {
+  background-color: #2893eb;
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 5px -5px 25px #104e81, inset -5px 0px 25px #104e81;
+}
+
+.liquid::after {
+  content: "";
+  width: 650px;
+  height: 450px;
+  background: #000;
+  z-index: 1;
+  position: absolute;
+  left: -110px;
+  top: -380px;
+  border-radius: 45%;
+  animation: animate 5s linear 2s infinite;
+}
+
+.liquid::before {
+  content: "";
+  width: 650px;
+  height: 450px;
+  background-color: rgb(68, 160, 235);
+  z-index: 1;
+  position: absolute;
+  left: -110px;
+  top: -380px;
+  border-radius: 40%;
+  animation: animate 5s linear 1.8s infinite;
+}
+
+.btn-txt {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 2px;
+}
+.Acept {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  outline: 0px;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: 900;
+  color: #fff;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 450px) {
+  .button {
+    width: 300px;
+    height: 150px;
+  }
+
+  .liquid {
+    width: 350px;
+    height: 200px;
+  }
+
+  .liquid::after {
+    width: 450px;
+    height: 300px;
+    left: -80px;
+    top: -250px;
+  }
+
+  .liquid::before {
+    width: 450px;
+    height: 300px;
+    left: -80px;
+    top: -250px;
+  }
+
+  .btn-txt {
+    font-size: 18px;
+  }
+}
